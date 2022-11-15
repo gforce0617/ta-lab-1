@@ -1,0 +1,4 @@
+﻿  DNF.cpp
+D:\documents\9 sem\ta\lab 1\lab 1\DNF.cpp(120,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\documents\9 sem\ta\lab 1\lab 1\DNF.cpp(219,3): warning C4551: в вызове функции отсутствует список аргументов
+  lab 1.vcxproj -> D:\documents\9 sem\ta\lab 1\x64\Debug\lab 1.exe

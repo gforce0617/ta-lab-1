@@ -5,15 +5,14 @@
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
 	string path = "scale.txt";
-	
+
 	ifstream fin;
 
 	fin.open(path);
 	if (!fin.is_open())
 	{
-		cout << "Ошибка открытия файла" << endl;
+		cout << "Fail open scale" << endl;
 		fin.close();
 		return 0;
 	}
@@ -21,13 +20,23 @@ int main()
 	string str;
 	getline(fin, str);
 
+
 	DNF dnf(str);
 
-	dnf.minimize();
+	vector<string> str_dnf = dnf.str_sdnf();
+
+
+
+	dnf.minimize(str_dnf);
 	dnf.print("mdnf.txt");
 
 	fin.close();
+
+	system("pause");
 	return 0;
+
+
 }
+
 
 

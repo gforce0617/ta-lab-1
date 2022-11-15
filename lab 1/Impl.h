@@ -10,10 +10,9 @@ private:
 	int ind;
 	int p;
 	bool pw;
-	//bool inf;
 
 	static int count(int);
-	
+
 
 public:
 	Impl(int);
@@ -22,11 +21,12 @@ public:
 	static string to2(int);
 
 	static Impl* patch(Impl&, Impl&);
-	void print_result();
+	string print_result();
 
 	bool get_pw();
 	int get_num();
 	int get_p();
+
 
 	friend ostream& operator<<(ostream& os, const Impl& d);
 	friend bool operator==(const Impl& a, const Impl& b);

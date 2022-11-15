@@ -1,3 +1,4 @@
+п»ї#pragma once
 #include "Impl.h"
 
 Impl::Impl(int num)
@@ -21,7 +22,7 @@ int Impl::count(int num)
 	int count = 0;
 	string buff = Impl::to2(num);
 
-	for  (int i = 0; i < buff.size(); i++)
+	for (int i = 0; i < buff.size(); i++)
 	{
 		if (buff[i] == '1')
 			count++;
@@ -36,10 +37,10 @@ string Impl::to2(int num)
 
 	for (int i = 0; i < 4; i++)
 	{
-		buff += char('0' + num % 2); // добавляем в конец
+		buff += char('0' + num % 2); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
 		num = num / 2;
 	}
-	
+
 	return string(buff.crbegin(), buff.crend());
 
 }
@@ -47,7 +48,7 @@ string Impl::to2(int num)
 Impl* Impl::patch(Impl& n1, Impl& n2)
 {
 	//Impl *result;
-	if (n1.num < n2.num && n1.p == n2.p && n2.ind - n1.ind == 1 && Impl::count(n2.num - n1.num)==1)
+	if (n1.num < n2.num && n1.p == n2.p && n2.ind - n1.ind == 1 && Impl::count(n2.num - n1.num) == 1)
 	{
 		//result= new Impl(n1.num);
 		//result->p = n1.p + n2.num - n1.num;
@@ -63,7 +64,7 @@ Impl* Impl::patch(Impl& n1, Impl& n2)
 	//return result;
 }
 
-void Impl::print_result()
+string Impl::print_result()
 {
 	string n = Impl::to2(this->num);
 	string p = Impl::to2(this->p);
@@ -75,7 +76,8 @@ void Impl::print_result()
 		else
 			result += n[i];
 	}
-	cout << result << endl;
+	//cout << result << endl;
+	return result;
 }
 
 bool Impl::get_pw()
@@ -92,6 +94,7 @@ int Impl::get_num()
 {
 	return this->num;
 }
+
 
 ostream& operator<<(ostream& os, const Impl& d)
 {
